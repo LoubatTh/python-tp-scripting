@@ -9,7 +9,7 @@ def convertir(nombre):
         return 'V' + 'I' * (nombre - 5)
 
     if nombre == 9:
-        return 'IX'
+        return 'XI'
 
     if nombre <= 13:
         return 'X' + 'I' * (nombre - 10)
