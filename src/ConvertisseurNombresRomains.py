@@ -16,5 +16,6 @@ def convertir(nombre):
 
     raise Exception('unexpected number')
 
+
 def cas_symbole_plus_n_unites(symbole, valeur_symbole, nombre_arabe):
     return symbole + 'I' * (nombre_arabe - valeur_symbole)
