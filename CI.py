@@ -7,6 +7,7 @@ branch = "dev"
 
 # Pull dev
 print("----------------------------------------------------------------------")
+subprocess.run(f"git checkout {branch}", shell=True)
 subprocess.run(f"git pull origin {branch}", shell=True)
 print("----------------------------------------------------------------------")
 
@@ -29,7 +30,7 @@ else:
    date = datetime.datetime.now().strftime("%Y-%m-%d")   
    
    subprocess.run(f"git checkout -b failure/{date}",shell=True)  
-   subprocess.run("git reset HEAD", shell=True)   
+   subprocess.run("git reset HEAD^", shell=True)   
    subprocess.run(f"git checkout failure/{date}",shell=True)
    subprocess.run("git cherry-pick HEAD", shell=True) 
 
