@@ -32,6 +32,8 @@ else:
    subprocess.run(f"git checkout -b failure/{date}",shell=True)  
    subprocess.run("git reset HEAD^", shell=True)   
    subprocess.run(f"git checkout failure/{date}",shell=True)
-   subprocess.run("git cherry-pick HEAD", shell=True) 
+   subprocess.run("git cherry-pick --allow-empty HEAD", shell=True) 
+   subprocess.run("git add --all", shell=True) 
+   subprocess.run("git cherry-pick --continue", shell=True) 
 
 print("fin.")
