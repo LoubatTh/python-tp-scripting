@@ -23,7 +23,8 @@ if tests_result.wasSuccessful() == True:
    print(date)
    subprocess.run("git rebase main", shell=True)
    subprocess.run("git checkout main",shell=True)
-   subprocess.run("git merge dev",shell=True)
+   subprocess.run("git rebase dev",shell=True)
+   subprocess.run("git push",shell=True)
    
 # Sinon, exlure le commit de "dev" et le déplacer sur une branche "failure/<horodatage>"
 else:
